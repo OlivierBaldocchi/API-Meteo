@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville&family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <img src="Corse.jpg" alt="">
+
+    <div class="main">
+        <div class="card">
+            <div class="front">
+                <h1>Meteo du Monde</h1>
+                <input id="input" type="text" value="senas" placeholder="Entrez votre ville">
+                <div class="bouton">
+                    <button id="search" type="button" onclick="getValue();">Rechercher</button>
+                </div>    
+            </div>
+
+            <div class="back">    
+                <p id="reponse"></p>
+                <button id="retour">retour</button>
+            </div>
+
+
+                <script> 
+                    $('#search').click(function() {
+                    $('.card').css('transform', 'rotateY(180deg)')
+                    });
+
+                    $('#retour').click(function() {
+                    $('.card').css('transform', 'rotateY(360deg)')
+                    });
+                </script>
+            
+        </div>    
+    </div>   
+
+</body>
+</html>
