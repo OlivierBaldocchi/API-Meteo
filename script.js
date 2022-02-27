@@ -36,6 +36,6 @@ function getValue() {
     + "Température maxi: " + tempmax + " degrés" + "<br>" 
     + "Conditions: " + data.weather[0].description + "<br>" 
     + "Humidité: " + data.main.humidity + "%" + "<br>"
-    + "Vent: " + speed + " km/h, " + dir;
+    + "Vent " + dir + ", " + speed + "km/h"  ;
   });
 }
