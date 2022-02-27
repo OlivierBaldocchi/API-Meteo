@@ -42,4 +42,15 @@
     #reponse {  
         font-size: 1.2rem;
     }
+
+    .bouton button, #retour {
+        margin: 1rem;
+        border-radius: 10px;
+        font-size: 1rem;
+        padding: 0.2rem;
+        text-align: center;
+        background-color: rgb(255, 132, 0);
+        color: white;
+        font-family: 'Indie Flower', cursive;
+    }
 }
