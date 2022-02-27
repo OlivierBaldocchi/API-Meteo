@@ -30,8 +30,8 @@
 @media screen and (max-width: 960px) {
     
     .main {
-        top: 45vh;
-        height: 100vh;
+        top: 70vh;
+        height: 150%;
         width: 80vw;
     }
 
@@ -45,12 +45,7 @@
 
     .bouton button, #retour {
         margin: 1rem;
-        border-radius: 10px;
         font-size: 1rem;
         padding: 0.2rem;
-        text-align: center;
-        background-color: rgb(255, 132, 0);
-        color: white;
-        font-family: 'Indie Flower', cursive;
     }
 }
