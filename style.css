@@ -48,8 +48,8 @@ input {
     height: 100%;
     border-radius: 20px;
     transform-style: preserve-3d;
-    transition: all 0.8s ease;
-    background-color: rgba(231, 225, 216, 0.1);
+    transition: all 0.5s ease;
+       
 }
 
 .front {
@@ -62,6 +62,7 @@ input {
     backface-visibility: hidden;
     overflow: hidden;
     text-align: center;
+     
 }
 
 .back{
@@ -75,7 +76,8 @@ input {
     overflow: hidden;
     transform: rotateY(180deg);
     text-align: center;
-  }
+    background-color: rgb(218, 239, 243); 
+}
 
 #reponse{
     position: relative;
