@@ -35,30 +35,35 @@
     }
 }
 
-@media screen and (max-width: 600px) and (orientation: portrait) {
-    
-    .main {
-        top: 63vh;
-    }
-}
 
-@media screen and (max-width: 800px) and (orientation: portrait) {
-    
-    .back {
-        top: 7vh;
-    }
-}
-
-@media screen and (max-width: 500px) and (orientation: portrait) {
-    
-    .back {
-        top: 1vh;
-    }
-}
-
-@media all and (max-device-width: 350px) and (orientation: portrait) {
+@media all and (max-device-width: 800px) and (orientation: portrait) {
     
     .main {
         top: 65vh;
+        width: 80vw;
+    }
+
+    h1 {
+        font-size: 10vw;
+    }
+
+    input {
+        font-size: 7vw;
+        height: 8vw;
+    }
+
+    .bouton button, #retour {
+        font-size: 6vw;
+        margin-top: 3rem;
+    }
+
+    #reponse {
+        font-size: 5vw;
+    }
+
+    .back {
+        width: 60vw;
+        text-align: center;
+        left: 13%;
     }
 }
