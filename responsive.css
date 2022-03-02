@@ -1,46 +1,22 @@
-
-@media all and (max-device-width: 800px) {
-
-    .bouton button, #retour {
-        margin: 2rem;
-    }
-}
-
-
-@media all and (max-device-width: 400px) {
-
-    .bouton button, #retour {
-        margin: 1rem;
-    }
-}
-
-
-@media all and (max-device-width: 1500px) and (orientation: portrait) {
+@media screen and (max-width: 1400px) {
 
     .main {
-        top: 72%;
+        top: 40%;
     }
+}
 
-    h1 {
-        font-size: 7vw;
-    }
+@media screen and (max-width: 1024px) {
 
-    input {
-        font-size: 4vw;
-        height: 4.5vw;
-    }
-
-    .bouton button, #retour {
-        font-size: 4vw;
+    .main {
+        top: 30%;
     }
 }
 
 
-@media all and (max-device-width: 800px) and (orientation: portrait) {
-    
+@media screen and (orientation: portrait) {
+
     .main {
-        top: 65vh;
-        width: 80vw;
+        top: 55%;
     }
 
     h1 {
@@ -48,22 +24,15 @@
     }
 
     input {
-        font-size: 7vw;
-        height: 8vw;
+        height: 7vw;
+        font-size: 6vw;
     }
 
     .bouton button, #retour {
-        font-size: 6vw;
-        margin-top: 3rem;
-    }
-
-    #reponse {
         font-size: 5vw;
     }
 
-    .back {
-        width: 60vw;
-        text-align: center;
-        left: 13%;
+    #reponse {
+        font-size: 4vw;
     }
 }

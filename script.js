@@ -36,7 +36,7 @@ function getValue() {
       dir = "de Nord-Ouest";
     }
            
-    para.innerHTML = "Ville: " + data.name + "<br>" + "<br>"
+    para.innerHTML = data.name + "<br>" + "<br>"
     + "Température mini: " + tempmin + " degrés" + "<br>" 
     + "Température maxi: " + tempmax + " degrés" + "<br>" 
     + "Conditions: " + data.weather[0].description + "<br>" 
