@@ -13,7 +13,7 @@
 }
 
 
-@media screen and (orientation: portrait) {
+@media all and (orientation: portrait) {
 
     .main {
         top: 55%;
