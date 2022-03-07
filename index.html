@@ -69,17 +69,20 @@
                 </div>    
                            
                 <button id="retour">retour</button>
+                <button class="retour" onclick="document.location.href='index.html'">retour</button>
             </div>
 
                 <script> 
                     $('#search').click(function() {
                     $('.card').css('transform', 'rotateY(180deg)')
                     $('.back2').css('display', 'none')
+                    $('.retour').css('display', 'none')
                     });
 
                     $('#search2').click(function() {
                     $('.card').css('transform', 'rotateY(180deg)')
                     $('.back2').css('display', 'block')
+                    $('#retour').css('display', 'none')
                     });
 
                     $('#retour').click(function() {
