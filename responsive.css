@@ -36,3 +36,14 @@
         font-size: 4vw;
     }
 }
+
+@media all and (max-device-width: 500px) and (orientation: portrait) {
+
+    .day {
+        width: 20vw;
+        height: auto;
+        font-size: 3vw;
+        padding: 1vw;
+        border: 0.1rem solid rgb(138, 152, 155);
+    }
+}

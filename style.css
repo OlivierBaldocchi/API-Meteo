@@ -20,7 +20,7 @@ input {
     font-family: 'Indie Flower', cursive;
 }
 
-.bouton button, #retour {
+.bouton button, #retour, .retour {
     border-radius: 10px;
     font-size: 2vw;
     padding: 0.5rem;
@@ -28,7 +28,7 @@ input {
     background-color: rgb(255, 132, 0);
     color: white;
     font-family: 'Indie Flower', cursive;
-    margin-top: 5rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -81,3 +81,31 @@ input {
     margin: 5%;
     font-family: 'Baskervville', serif;
 }
+
+.courbe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3%;
+    background-color: white;
+}
+
+.prev {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.day {
+    background-color: white;
+    color: rgb(128, 66, 0);
+    width: 15vw;
+    height: auto;
+    margin-top: 5%;
+    font-size: 2vw;
+    padding: 0.5vw;
+    border: 0.3rem solid rgb(138, 152, 155);
+    font-family: 'Baskervville', serif;
+}
+

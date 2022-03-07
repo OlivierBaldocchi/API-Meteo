@@ -1,8 +1,3 @@
-/*var test = "http://api.openweathermap.org/data/2.5/forecast?lat=35&lon=139&appid=af1b712e6037198e930996c2e710984c";
-$.get(test, function(data) {
-      console.log(data.list[6]);  
-});
-*/
 
 function getValue() {
   var choixVille = document.getElementById("input").value;

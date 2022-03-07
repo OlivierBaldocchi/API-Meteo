@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MeteoDuMonde</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
@@ -23,18 +24,58 @@
                     <h1>Meteo du Monde</h1>
                     <input id="input" type="text" placeholder="Entrez votre ville">        
                 <div class="bouton"> 
-                    <button id="search" type="button" onclick="getValue();">Rechercher</button>
-                </div>                        
+                    <button id="search" type="button" onclick="getValue();">Actuelle</button>
+                </div>   
+                <div class="bouton"> 
+                    <button id="search2" type="button" onclick="getPrev();">Prévisions</button>
+                </div>                      
             </div>
 
             <div class="back">    
-                <p id="reponse"></p>
-                <button id="retour">retour</button>
+                <p id="reponse"></p> 
+                
+                <div class="back2">
+                    <div class="courbe">
+                        <canvas id="canva" width="400" height="400"></canvas>
+                            <script src="graph.js"></script>
+                    </div>
+                    
+                    <br>
+
+                    <div class="prev">
+                        <div>
+                            <div class="day" id="day0">
+                            </div>
+                            <div class="day" id="day1">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="day" id="day2">
+                            </div>
+                            <div class="day" id="day3">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="day" id="day4">
+                            </div>
+                            <div class="day" id="day5">
+                            </div>
+                        </div>    
+                    </div>
+                </div>    
+                           
+                <button class="retour" onclick="document.location.href='index.html'">retour</button>
             </div>
 
                 <script> 
                     $('#search').click(function() {
                     $('.card').css('transform', 'rotateY(180deg)')
+                    $('.back2').css('display', 'none')
+                    });
+
+                    $('#search2').click(function() {
+                    $('.card').css('transform', 'rotateY(180deg)')
+                    $('.back2').css('display', 'block')
                     });
 
                     $('#retour').click(function() {
