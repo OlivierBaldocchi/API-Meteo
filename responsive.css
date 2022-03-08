@@ -47,9 +47,13 @@
 
     .day {
         width: 20vw;
-        height: auto;
+        height: 25vw;
         font-size: 3vw;
         padding: 1vw;
         border: 0.1rem solid rgb(138, 152, 155);
+    }
+
+    .retour {
+        font-size: 6vw;
     }
 }

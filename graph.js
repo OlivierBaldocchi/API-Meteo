@@ -29,8 +29,8 @@ case 7:
 }
 
 function getPrev() {
-
-    var choixVille = document.getElementById("input").value;
+    
+    choixVille = document.getElementById("input").value;
   
     var url = "http://api.openweathermap.org/data/2.5/forecast?q="+choixVille+"&units=metric&lang=fr&appid=af1b712e6037198e930996c2e710984c";
   
@@ -39,13 +39,13 @@ function getPrev() {
         var para = document.getElementById("reponse");
         para.innerHTML = data.city.name;
         
-    
+        console.log(data);
         var time = new Date();
         var timeZone = data.city.timezone / 3600 - 1;
     
         time = 24 - (time.getHours()) - (timeZone);
         time = Math.trunc((time/3) + 1);
-        console.log(data);    
+        console.log(time);   
 
         var ref = [2,4,10,12,18,20];
         var newRef = [];
@@ -58,15 +58,20 @@ function getPrev() {
             recupData.push(data.list[element].main.temp)
         );
         
+            if(canva instanceof Chart)
+                    {
+                        canva.destroy();
+                    }
             Chart.defaults.font.size = 20;
-            const canva = new Chart(ctx, {
+            canva = new Chart(ctx, {
                 type: 'line',
                 data: {
                     labels: lab,
                     datasets:[{
-                    label: 'Températures',
+                    label: '°C',
                     data: recupData,
-                    borderColor: 'rgb(255, 99, 132)',
+                    borderWidth: 1,
+                    borderColor: 'rgb(255, 132, 0)',
                     fill: false,
                     tension: 0.4
                     }]  
@@ -99,8 +104,8 @@ function getPrev() {
                     maintainAspectRatio: false  
                 }
                 });
-
-  
+                   
+        
         var prevTemp = [];
         newRef.forEach(element => 
             prevTemp.push(Math.round(data.list[element].main.temp)));
@@ -120,7 +125,7 @@ function getPrev() {
             + "<br>" + description[i]
             + "<br>" + "vent: " + prevVent[i] + " km/h";        
         };    
-
+        
     })
 };
 
