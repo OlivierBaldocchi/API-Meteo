@@ -41,10 +41,10 @@ function getPrev() {
         
         console.log(data);
         var time = new Date();
-        var timeZone = data.city.timezone / 3600 - 1;
+        var timeZone = (data.city.timezone / 3600) - 1;
     
-        time = 24 - (time.getHours()) - (timeZone);
-        time = Math.trunc((time/3) + 1);
+        time = 24 - timeZone - (time.getHours());
+        time = Math.trunc((time/3)) + 1;
         console.log(time);   
 
         var ref = [2,4,10,12,18,20];
