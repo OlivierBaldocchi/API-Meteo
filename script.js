@@ -6,10 +6,10 @@ function getValue() {
   
   $.get(url, function(data){  
     var para = document.getElementById("reponse");
-    tempmin = Math.round(data.main.temp_min); 
-    tempmax = Math.round(data.main.temp_max);
+    temp = Math.round(data.main.temp); 
+    tempfeel = Math.round(data.main.feels_like);
     speed = Math.round(data.wind.speed / 10 * 36);
-    
+    console.log(data);
     var direc = data.wind.deg;
     var dir = '';
 
@@ -31,11 +31,16 @@ function getValue() {
       dir = "de Nord-Ouest";
     }
            
+    if (data.weather[0].description === 'fumée') {
+      data.weather[0].description = 'brouillard'
+    };
+
     para.innerHTML = data.name + "<br>" + "<br>"
-    + "Température mini: " + tempmin + " degrés" + "<br>" 
-    + "Température maxi: " + tempmax + " degrés" + "<br>" 
+    + "Température: " + temp + " °C" + "<br>" 
+    + "Température ressentie: " + tempfeel + " °C" + "<br>" 
     + "Conditions: " + data.weather[0].description + "<br>" 
     + "Humidité: " + data.main.humidity + "%" + "<br>"
     + "Vent " + dir + ", " + speed + "km/h"  ;
   });
+  
 }

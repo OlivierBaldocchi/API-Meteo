@@ -42,12 +42,11 @@ function getPrev() {
         console.log(data);
         var time = new Date();
         var timeZone = (data.city.timezone / 3600) - 1;
-    
-        time = 24 - timeZone - (time.getHours());
-        time = Math.trunc((time/3)) + 1;
-        console.log(time);   
-
-        var ref = [2,4,10,12,18,20];
+        
+        time = 24 - (time.getHours());        
+        time = Math.trunc((time) / 3) - Math.trunc((timeZone) / 3);
+        
+        var ref = [3,5,11,13,19,21];
         var newRef = [];
         ref.forEach(element =>
             newRef.push(time + element)
@@ -58,8 +57,7 @@ function getPrev() {
             recupData.push(data.list[element].main.temp)
         );
         
-            if(canva instanceof Chart)
-                    {
+            if(canva instanceof Chart) {
                         canva.destroy();
                     }
             Chart.defaults.font.size = 20;
@@ -121,7 +119,7 @@ function getPrev() {
 
         for (let i=0; i<6; i++) {
             document.getElementById("day"+i).innerHTML = lab[i]
-            + "<br>" + "<br>" + prevTemp[i] + " degrés"
+            + "<br>" + "<br>" + prevTemp[i] + " °C"
             + "<br>" + description[i]
             + "<br>" + "vent: " + prevVent[i] + " km/h";        
         };    
