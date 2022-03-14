@@ -77,16 +77,19 @@
                     $('.card').css('transform', 'rotateY(180deg)')
                     $('.back').css('display', 'block')
                     $('.back2').css('display', 'none')
+                    $('.front').css('display', 'none')
                     });
 
                     $('#search2').click(function() {
                     $('.card').css('transform', 'rotateY(180deg)')
                     $('.back').css('display', 'none')
                     $('.back2').css('display', 'block')
+                    $('.front').css('display', 'none')
                     });
 
                     $('#retour, #retour2').click(function() {
-                    $('.card').css('transform', 'rotateY(360deg)');  
+                    $('.card').css('transform', 'rotateY(360deg)')
+                    $('.front').css('display', 'block') 
                     });                    
                 </script>
             
