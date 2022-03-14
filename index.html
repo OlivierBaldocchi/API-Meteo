@@ -36,55 +36,58 @@
 
             <div class="back">    
                 <p id="reponse"></p> 
-                
-                <div class="back2">
-                    <div class="courbe">
-                        <canvas id="canva" width="400" height="400"></canvas>
-                            <script src="graph.js"></script>
-                    </div>
-                    
-                    <br>
-
-                    <div class="prev">
-                        <div>
-                            <div class="day" id="day0">
-                            </div>
-                            <div class="day" id="day1">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="day" id="day2">
-                            </div>
-                            <div class="day" id="day3">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="day" id="day4">
-                            </div>
-                            <div class="day" id="day5">
-                            </div>
-                        </div>    
-                    </div>
-
-                </div>    
-                           
                 <button id="retour">retour</button>
             </div>
+
+                
+            <div class="back2">
+                <p id="reponse2"></p> 
+                <div class="courbe">
+                    <canvas id="canva" width="400" height="400"></canvas>
+                        <script src="graph.js"></script>
+                </div>               
+                <br>
+                <div class="prev">
+                    <div>
+                        <div class="day" id="day0">
+                        </div>
+                        <div class="day" id="day1">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="day" id="day2">
+                        </div>
+                        <div class="day" id="day3">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="day" id="day4">
+                        </div>
+                        <div class="day" id="day5">
+                        </div>
+                    </div>    
+                </div>
+                <button id="retour2">retour</button>
+            </div>    
+                           
+                
 
                 <script> 
                     $('#search').click(function() {
                     $('.card').css('transform', 'rotateY(180deg)')
+                    $('.back').css('display', 'block')
                     $('.back2').css('display', 'none')
                     });
 
                     $('#search2').click(function() {
                     $('.card').css('transform', 'rotateY(180deg)')
+                    $('.back').css('display', 'none')
                     $('.back2').css('display', 'block')
                     });
 
-                    $('#retour').click(function() {
-                    $('.card').css('transform', 'rotateY(360deg)');                         
-                    });
+                    $('#retour, #retour2').click(function() {
+                    $('.card').css('transform', 'rotateY(360deg)');  
+                    });                    
                 </script>
             
         </div>    

@@ -36,7 +36,7 @@ function getPrev() {
   
     $.get(url, function(data) {
   
-        var para = document.getElementById("reponse");
+        var para = document.getElementById("reponse2");
         para.innerHTML = data.city.name;
         
         console.log(data);
