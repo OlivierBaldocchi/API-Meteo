@@ -85,6 +85,7 @@ input {
 }
 
 .courbe {
+    display: -webkit-flex;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,6 +95,7 @@ input {
 
 .prev {
     flex-wrap: wrap;
+    display: -webkit-flex;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
