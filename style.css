@@ -71,11 +71,6 @@ input {
     transform: rotateY(180deg);
 }
 
-.back2>div.prev {
-    overflow: hidden;
-    backface-visibility: hidden; 
-}
-
 #reponse, #reponse2 {
     position: relative;
     color: rgb(128, 66, 0);
