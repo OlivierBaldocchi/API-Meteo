@@ -1,5 +1,6 @@
 img {
     width: 76%;
+    -webkit-display: flex;
     display: flex;
     margin: auto;
 }
@@ -85,6 +86,7 @@ input {
 }
 
 .courbe {
+    -webkit-display: flex;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,7 +95,9 @@ input {
 }
 
 .prev {
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-display: flex;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
